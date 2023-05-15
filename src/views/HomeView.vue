@@ -61,6 +61,9 @@ const gotopage3 = ()=>{
 }
 const gotopage4 = ()=>{
   animationclass3.value = 'shake'
+  setTimeout(()=>{
+    router.push('/page5')
+  },1500)
 }
 </script>
 

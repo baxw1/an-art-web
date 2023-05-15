@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import Page2 from '../views/Page2.vue'
 import Page3 from '../views/Page3.vue'
 import Page4 from '../views/Page4.vue'
+import Page5 from '../views/Page5'
 import Exhibition from '../views/Exhibition.vue'
 
 const routes = [
@@ -42,6 +43,12 @@ const routes = [
     name: 'Page4',
     // component: () => import(/* webpackChunkName: "page4" */ '../views/Page4.vue')
     component: Page4
+  },
+  {
+    path: '/page5',
+    name: 'Page5',
+    // component: () => import(/* webpackChunkName: "page4" */ '../views/Page4.vue')
+    component: Page5
   },
 ]
 
