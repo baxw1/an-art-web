@@ -48,25 +48,8 @@ import Menu from '@/components/Menu.vue'
         height: 280px;
         z-index: 55;
         transform-origin: 170px 140px;
-        --scale_num: 1.2;
-        animation: fadeInDown var(--delay), rolling1 9s linear var(--delay) infinite;
-    }
-    @keyframes rolling1 {
-        0% {
-            transform: rotate(0deg) scale(1);
-        }
-        25% {
-            transform: rotate(90deg) scale(1.8);
-        }
-        50% {
-            transform: rotate(180deg) scale(1);
-        }
-        75% {
-            transform: rotate(270deg) scale(1.1);
-        }
-        100% {
-            transform: rotate(360deg) scale(1);
-        }
+        --scale_num: 1.3;
+        animation: fadeInDown var(--delay), rolling_zooming 8s linear var(--delay) infinite;
     }
 
     .text1 {

@@ -12,7 +12,7 @@
   position: relative;
   left: 0px;
   top: 0px;
-  --v: 300;
+  --v: 200;
 }
 
 /* 弹幕动画 */
@@ -48,6 +48,24 @@
   }
   100%{
     transform: scale(1);
+  }
+}
+/* 逆时针旋转+缩放 */
+@keyframes rolling_zooming {
+  0% {
+    transform: rotate(360deg) scale(1);
+  }
+  25% {
+    transform: rotate(270deg) scale(var(--scale_num));
+  }
+  50%{
+    transform: rotate(180deg) scale(1);
+  }
+  75%{
+    transform: rotate(90deg) scale(var(--scale_num));
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
   }
 }
 </style>

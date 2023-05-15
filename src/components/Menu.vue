@@ -6,7 +6,6 @@
         <div class="button4" @click="pagetoHome"></div>
         <div class="button5" @click="pagetoHome"></div>
     </div>
-    <div class="button1_bottom"></div>
 </template>
 
 <script>
@@ -57,25 +56,6 @@ import router from '@/router';
         height: 66px;
         z-index: 991;
     }
-    /* .button1_bottom {
-        background-color: aquamarine;
-        position: relative;
-        left: -79px;
-        top: 704px;
-        width: 79px;
-        height: 66px;
-        z-index: 143;
-    }
-    .button1_bottom:hover {
-        background-color: aquamarine;
-        position: relative;
-        left: 25px;
-        top: 704px;
-        width: 79px;
-        height: 66px;
-        z-index: 143;
-
-    }  */
     .button2 {
         background-image: url("../assets/menu/drawingBoard.png");
         position: absolute;

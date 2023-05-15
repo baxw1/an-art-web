@@ -112,8 +112,8 @@ import Menu from '@/components/Menu.vue'
   background-image: url("../assets/page5/text4.png");
   background-repeat: no-repeat;
   position: absolute;
-  /* left: 189px; */
-  right: calc(-632px - 189px);
+  left: 189px;
+  /* right: calc(-632px - 189px); */
   top: 240px;
   width: 632px;
   height: 112px;
@@ -123,7 +123,8 @@ import Menu from '@/components/Menu.vue'
   --box_left: 189;
   --s: calc(1536 + var(--box_w) + var(--box_left));
   --t: calc(var(--s)/var(--v)*1s);
-  animation: danmu var(--t) linear 3.2s infinite, zooming 1.2s linear 3.2s infinite;
+  /* animation: danmu var(--t) linear 3.2s infinite, zooming 1.2s linear 3.2s infinite; */
+  animation: fadeInDown 3.2s;
 }
 
 .text5_4 {
@@ -140,14 +141,14 @@ import Menu from '@/components/Menu.vue'
   --box_left: 287;
   --s: calc(1536 + var(--box_w) + var(--box_left));
   --t: calc(var(--s)/var(--v)*1s);
-  animation: danmu_4 var(--t) linear 3.2s infinite, zooming 1.2s linear 5.2s infinite;
+  /* animation: danmu_4 var(--t) linear 3.2s infinite, zooming 1.2s linear 5.2s infinite; */
 }
 
 .text6_4 {
   background-image: url("../assets/page5/text6.png");
   position: absolute;
-  /* left: 182px; */
-  right: calc(-567px - 182px);
+  left: 182px;
+  /* right: calc(-567px - 182px); */
   top: 436px;
   width: 567px;
   height: 247px;
@@ -157,7 +158,8 @@ import Menu from '@/components/Menu.vue'
   --box_left: 182;
   --s: calc(1536 + var(--box_w) + var(--box_left));
   --t: calc(var(--s)/var(--v)*1s);
-  animation: danmu var(--t) linear 3.2s infinite, zooming 1.2s linear 4.2s infinite;
+  /* animation: danmu var(--t) linear 3.2s infinite, zooming 1.2s linear 4.2s infinite; */
+  animation: fadeInDown 3.2s;
 }
 
 .dabian1 {
@@ -169,16 +171,10 @@ import Menu from '@/components/Menu.vue'
     height: 570px;
     z-index: 38;
     --scale_num: 1.1;
-    animation: fadeInDown 3.2s, rolling 8s linear 3.2s infinite, zooming 1.2s linear 3.2s infinite;
+    transform-origin: 285px 285px;
+    animation: fadeInDown 3.2s, rolling_zooming 8s linear 3.2s infinite;
 }
-@keyframes rolling {
-  0% {
-      transform: rotate(360deg);
-  }
-  100% {
-      transform: rotate(0deg);
-  }
-}
+
 .dabian2 {
     background-image: url("../assets/page5/答辩2.png");
     position: absolute;

@@ -1,11 +1,19 @@
 <template>
     <canvas id="myCanvas" ref='canvas'
-            width="1536" height="868" @mousedown="mousedown" @mouseup="mouseup" @mousemove="mousemove" @mouseout="mouseup">
+            width="920" height="497" @mousedown="mousedown" @mouseup="mouseup" @mousemove="mousemove" @mouseout="mouseup">
     </canvas>
-  </template>
+</template>
    
 <script setup>
-import { onMounted, ref } from 'vue';
+import { onMounted, ref, toRefs, defineProps, defineEmits, watch } from 'vue';
+
+    const emit = defineEmits(['saveok'])
+    const props = defineProps({
+        paincolor:String,
+        save:Boolean,
+    })
+    const {paincolor, save} = toRefs(props)
+    const new_imageurl = ref('')
 
     const isDown = ref(false)
     let beginPoint = null;
@@ -19,13 +27,22 @@ import { onMounted, ref } from 'vue';
     onMounted(() => {
         ctx = canvas.value.getContext('2d'); 
     })
+    watch(
+        ()=>save.value,
+        (val, oldval)=>{
+            if(val){
+                new_imageurl.value = canvas.value.toDataURL()
+                console.log(new_imageurl.value)
+                emit('saveok', new_imageurl.value);
+                ctx.clearRect(0,0,920,497);
+            }
+        }
+    )
     const mousedown = (e)=>{
-        console.log("鼠标落下");
         isDown.value = true;
         beginPoint = getPos(e);
     }
     const mouseup = (e)=>{
-        console.log("鼠标抬起");
         if (!isDown.value) return;
         const endPoint = getPos(e);
         drawLine(beginPoint, endPoint);
@@ -33,7 +50,6 @@ import { onMounted, ref } from 'vue';
         isDown.value = false;
     }
     const mousemove = (e)=>{
-        console.log("鼠标移动");
         if (!isDown.value) return;
         const endPoint = getPos(e);
         drawLine(beginPoint, endPoint);
@@ -41,14 +57,14 @@ import { onMounted, ref } from 'vue';
     }
     const getPos = (e)=>{
         return {
-            x: e.clientX,
-            y: e.clientY
+            x: e.clientX-118,
+            y: e.clientY-101
         }
     }
     const drawLine = (beginPoint, endPoint)=>{
         ctx.beginPath();
         // ctx.lineWidth = 20;
-        console.log(beginPoint.x)
+        ctx.strokeStyle = paincolor.value;
         ctx.moveTo(beginPoint.x, beginPoint.y);
         ctx.lineTo(endPoint.x, endPoint.y);
         ctx.stroke();
@@ -77,7 +93,7 @@ import { onMounted, ref } from 'vue';
 <style>
 #myCanvas{
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 119px;
+    top: 102px;
 }
 </style>
