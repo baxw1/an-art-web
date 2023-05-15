@@ -1,7 +1,7 @@
 <template>
-    <div class="bg">
+    <div class="bg_3">
         <Menu></Menu>
-        <div class="animate__animated circle"></div>
+        <div class="circle"></div>
         <div class="wujiaoxing1"></div>
         <div class="wujiaoxing2"></div>
         <div class="wujiaoxing3"></div>
@@ -28,7 +28,7 @@ import Menu from '@/components/Menu.vue'
 </script>
 
 <style>
-    .bg {
+    .bg_3 {
         background-image: url("../assets/page4/bg.png");
         position: relative;
         left: 80px;
@@ -49,7 +49,7 @@ import Menu from '@/components/Menu.vue'
         z-index: 55;
         transform-origin: 170px 140px;
         --scale_num: 1.2;
-        animation: fadeInDown var(--delay),rolling1 9s linear var(--delay) infinite;
+        animation: fadeInDown var(--delay), rolling1 9s linear var(--delay) infinite;
     }
     @keyframes rolling1 {
         0% {

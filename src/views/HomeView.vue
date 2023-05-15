@@ -1,5 +1,5 @@
 <template>
-  <div class="bg">
+  <div class="bghome">
     <div class="mainBackground">
       <div class="bgText">
           <div class="animate__animated menucard1" @click="gotopage1">
@@ -65,7 +65,7 @@ const gotopage4 = ()=>{
 </script>
 
 <style>
-.bg{
+.bghome{
   background-image: url(../assets/page1/bg.png);
   background-repeat:no-repeat;
   background-size: cover;

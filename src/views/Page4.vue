@@ -1,15 +1,15 @@
 <template>
     <div class="bg_4">
         <Menu></Menu>
-        <div class="animate__animated text_4"></div>
-        <div class="animate__animated text1_4"></div>
-        <div class="animate__animated text2_4"></div>
-        <div class="animate__animated text3_4"></div>
-        <div class="animate__animated text4_4"></div>
-        <div class="animate__animated text5_4"></div>
-        <div class="animate__animated text6_4"></div>
-        <div class="animate__animated dabian1"></div>
-        <div class="animate__animated dabian2"></div>
+        <div class="text_4"></div>
+        <div class="text1_4"></div>
+        <div class="text2_4"></div>
+        <div class="text3_4"></div>
+        <div class="text4_4"></div>
+        <div class="text5_4"></div>
+        <div class="text6_4"></div>
+        <div class="dabian1"></div>
+        <div class="dabian2"></div>
     </div>
 </template>
 
@@ -168,11 +168,6 @@ import Menu from '@/components/Menu.vue'
     width: 570px;
     height: 570px;
     z-index: 38;
-    /* animation-duration: 8s;
-    animation-iteration-count: infinite;
-    transform-origin: 285px 285px;
-    animation-name: rolling;
-    animation-timing-function: linear; */
     --scale_num: 1.1;
     animation: fadeInDown 3.2s, rolling 8s linear 3.2s infinite, zooming 1.2s linear 3.2s infinite;
 }
@@ -192,11 +187,6 @@ import Menu from '@/components/Menu.vue'
     width: 650px;
     height: 650px;
     z-index: 37;
-    /* animation-duration: 8s;
-    animation-iteration-count: infinite;
-    transform-origin: 325px 325px;
-    animation-name: rolling1;
-    animation-timing-function: linear; */
     animation: fadeInDown 2s, rolling1_4 8s linear 3.2s infinite;
 }
 @keyframes rolling1_4 {

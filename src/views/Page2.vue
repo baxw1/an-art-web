@@ -139,9 +139,9 @@ onMounted(()=>{
   top: 41px;
   width: 183px;
   height: 189px;
-  animation-name: rolling1;
+  animation-name: rolling1_2;
 }
-@keyframes rolling1 {
+@keyframes rolling1_2 {
   0% {
     transform: rotate(0deg);
     animation-timing-function: linear;
@@ -156,9 +156,9 @@ onMounted(()=>{
   top: 323px;
   width: 188px;
   height: 183px;
-  animation-name: rolling2;
+  animation-name: rolling2_2;
 }
-@keyframes rolling2 {
+@keyframes rolling2_2 {
   0% {
     transform: rotate(50deg);
     animation-timing-function: linear;
