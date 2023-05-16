@@ -62,7 +62,7 @@
         left:118px;
         width: 925px;
         height: 101px;
-        background-color: black;
+        /*background-color: black;*/
         z-index: 2;
     }
     .topic_6{

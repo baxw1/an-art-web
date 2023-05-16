@@ -31,9 +31,9 @@ import { onMounted, ref, toRefs, defineProps, defineEmits, watch } from 'vue';
         ()=>save.value,
         (val, oldval)=>{
             if(val){
-                new_imageurl.value = canvas.value.toDataURL()
-                console.log(new_imageurl.value)
-                emit('saveok', new_imageurl.value);
+                // new_imageurl.value = canvas.value.toDataURL()
+                // console.log(new_imageurl.value)
+                // emit('saveok', new_imageurl.value);
                 ctx.clearRect(0,0,920,497); //清除画板
             }
         }

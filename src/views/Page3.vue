@@ -24,7 +24,7 @@ import Menu from '@/components/Menu.vue'
     }
 </script>
 <script setup>
-    
+
 </script>
 
 <style>
@@ -179,7 +179,7 @@ import Menu from '@/components/Menu.vue'
         z-index: 65;
         transform-origin: 120px 90px;
         --scale_num: 1.2;
-        animation: fadeInRight var(--delay), rolling1 3s linear var(--delay) infinite;
+        animation: fadeInRight var(--delay), rolling_zooming 3s linear var(--delay) infinite;
     }
     .wujiaoxing3 {
         background-image: url("../assets/page4/五角星.png");
@@ -191,7 +191,7 @@ import Menu from '@/components/Menu.vue'
         z-index: 66;
         transform-origin: 80px 140px;
         --scale_num: 1.2;
-        animation: fadeInRight var(--delay), rolling1 2.5s linear var(--delay) infinite;
+        animation: fadeInRight var(--delay), rolling_zooming 2.5s linear var(--delay) infinite;
     }
     @keyframes rolling2 {
         0% {
