@@ -3,7 +3,7 @@
             width="920" height="497" @mousedown="mousedown" @mouseup="mouseup" @mousemove="mousemove" @mouseout="mouseup">
     </canvas>
 </template>
-   
+
 <script setup>
 import { onMounted, ref, toRefs, defineProps, defineEmits, watch } from 'vue';
 
@@ -25,7 +25,7 @@ import { onMounted, ref, toRefs, defineProps, defineEmits, watch } from 'vue';
     let y0 = 0
     let ctx = null
     onMounted(() => {
-        ctx = canvas.value.getContext('2d'); 
+        ctx = canvas.value.getContext('2d');
     })
     watch(
         ()=>save.value,
@@ -34,7 +34,7 @@ import { onMounted, ref, toRefs, defineProps, defineEmits, watch } from 'vue';
                 new_imageurl.value = canvas.value.toDataURL()
                 console.log(new_imageurl.value)
                 emit('saveok', new_imageurl.value);
-                ctx.clearRect(0,0,920,497);
+                ctx.clearRect(0,0,920,497); //清除画板
             }
         }
     )
@@ -73,7 +73,7 @@ import { onMounted, ref, toRefs, defineProps, defineEmits, watch } from 'vue';
     const drawRect = (e)=>{
         if(isDown.value){
         console.log("绘制图形");
-        const ctx = canvas.value.getContext('2d'); 
+        const ctx = canvas.value.getContext('2d');
         x0 = x.value;
         y0 = y.value;
 
@@ -89,7 +89,7 @@ import { onMounted, ref, toRefs, defineProps, defineEmits, watch } from 'vue';
         }
     }
 </script>
-   
+
 <style>
 #myCanvas{
     position: absolute;

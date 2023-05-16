@@ -17,8 +17,9 @@
             <img v-if="newimgurl===''?false:true" :src="newimgurl" width="500" alt="aa">
         </div>
         <div class="history"></div>
-        <!-- <div class="bottom-bar"></div> -->
-        
+         <div class="bottom-bar">
+           <textarea id="input" rows="5" cols="5"></textarea>
+         </div>
     </div>
 </template>
 
@@ -137,12 +138,12 @@
         z-index: 133;
     }
     .save {
-        background-color: aliceblue;
+        /*background-color: aliceblue;*/
         position: absolute;
         top: 0px;
         left: 0px;
         width: 123px;
-        height: 30px;
+        height: 50px;
         z-index: 134;
     }
     .history{
@@ -167,8 +168,15 @@
         left:118px;
         width: 925px;
         height: 270px;
-        background-color: black;
+        /*background-color: black;*/
         z-index: 2;
+    }
+    #input{
+      background-color: rgba(0, 0, 0, 0); /* 透明背景色 */
+      border: none;
+      padding: 10px;
+      width: 880px;
+      height: 250px;
     }
     .zhanwei1{
         height: 500px;
